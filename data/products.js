@@ -46,6 +46,36 @@ const products = [
     sizeChartLink: "images/clothing-size-chart.png"
   },
   {
+    id: "e43638ce-6aa0-4b85-b27f-m1d07eb678c6",
+    image: "images/products/backpack.jpg",
+    name: "Black School Backpack",
+    rating: {
+      stars: 4,
+      count: 181
+    },
+    priceCents: 1590,
+    keywords: [
+      "school",
+      "black",
+      "backpack"
+    ]
+  },
+    {
+    id: "e43638ce-6aa0-4b85-b27f-n1d07eb678c6",
+    image: "images/products/umbrella.jpg",
+    name: "Grey Adult Umbrella",
+    rating: {
+      stars: 3,
+      count: 432
+    },
+    priceCents: 500,
+    keywords: [
+      "rain",
+      "umbrella",
+      "utility"
+    ]
+  },
+  {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
     image: "images/products/black-2-slot-toaster.jpg",
     name: "2 Slot Toaster - Black",
