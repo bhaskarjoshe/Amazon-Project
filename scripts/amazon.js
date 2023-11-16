@@ -1,4 +1,4 @@
-import {cart, addToCart} from '../data/cart.js';
+import {cart, addToCart,calculateCartQuantity} from '../data/cart.js';
 import {products} from '../data/products.js'
 import{formatCurrency} from './utils/money.js'
 
@@ -70,7 +70,7 @@ const addedMessageTimeouts = {};
 
 
 
-function updateCartQuantity(productId){
+export function updateCartQuantity(productId){
 let cartQuantity=0;
 cart.forEach((cartItem)=>{
 cartQuantity+=cartItem.quantity;
@@ -83,6 +83,7 @@ const timeoutId=setTimeout(()=>{
 addedMessage.classList.remove('added-to-cart-visible');
 },2000);
 addedMessageTimeouts[productId]=timeoutId;
+document.querySelector('.js-cart-quantity').innerText=cartQuantity;
 })
 }
 
@@ -95,5 +96,5 @@ updateCartQuantity(productId);
 })
 });
 
-
-
+window.onload=()=>{
+document.querySelector('.js-cart-quantity').innerText=`${calculateCartQuantity()}`;}
