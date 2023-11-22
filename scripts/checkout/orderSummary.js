@@ -109,6 +109,7 @@ html+=`
 return html;
 }
 
+
 window.onload=updateCartQuantity();
 document.querySelector(`.js-order-summary`).innerHTML=cartSummaryHTML;
 
