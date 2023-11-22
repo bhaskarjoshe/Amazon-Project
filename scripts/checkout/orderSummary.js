@@ -116,16 +116,15 @@ document.querySelectorAll('.js-delete-link').forEach((link)=>{
 link.addEventListener('click',()=>{
 const productId=link.dataset.productId;
 removeFromCart(productId);
-const container=document.querySelector(`.js-cart-item-container-${productId}`);
-container.remove(productId);
+renderOrderSummary();
 updateCartQuantity();
 renderPaymentSummary();
 });
 });
 
 function updateCartQuantity(){
-
 const cartQuantity=calculateCartQuantity();
+renderPaymentSummary();
 document.querySelector('.js-return-to-home-link').innerHTML=`${cartQuantity} items`;
 }
 
